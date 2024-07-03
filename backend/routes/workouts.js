@@ -12,7 +12,5 @@ router.get("/", getWorkouts)
 router.get("/:id", getWorkout)
 router.post("/", createWorkout)
 router.delete("/:id", deleteWorkout)
-router.patch("/:id", (req, res) => {
-  req.send({ mssg: " a patch workout" })
-})
+router.patch("/:id", updateWorkout)
 export default router
