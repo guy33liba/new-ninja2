@@ -1,14 +1,18 @@
 import express from "express"
-import { createWorkout, getWorkout, getWorkouts } from "../controllers/workoutControllers"
+import {
+  createWorkout,
+  deleteWorkout,
+  getWorkout,
+  getWorkouts,
+  updateWorkout,
+} from "../controllers/workoutControllers"
 const router = express.Router()
 
 router.get("/", getWorkouts)
 router.get("/:id", getWorkout)
 router.post("/", createWorkout)
-router.delete("/", (req, res) => {
-  req.send({ mssg: " a delete workout" })
-})
-router.patch("/", (req, res) => {
+router.delete("/:id", deleteWorkout)
+router.patch("/:id", (req, res) => {
   req.send({ mssg: " a patch workout" })
 })
 export default router
