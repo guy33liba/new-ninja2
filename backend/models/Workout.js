@@ -10,8 +10,5 @@ const workoutSchema = mongoose.Schema(
   },
   { timestamps: true },
 )
-  { timestamps: true }
-)
-
 const Workout = mongoose.model("Workout", workoutSchema)
 export default Workout
