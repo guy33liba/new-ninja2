@@ -1,5 +1,5 @@
 import mongoose, { mongo } from "mongoose"
-import Workout from "../models/Workout"
+import Workout from "../models/Workout.js"
 
 const createWorkout = async (req, res) => {
   const { title, load, reps } = req.body
