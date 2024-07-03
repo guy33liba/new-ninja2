@@ -5,7 +5,7 @@ import {
   getWorkout,
   getWorkouts,
   updateWorkout,
-} from "../controllers/workoutControllers"
+} from "../controllers/workoutControllers.js"
 const router = express.Router()
 
 router.get("/", getWorkouts)
